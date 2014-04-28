@@ -215,6 +215,7 @@ class PRConjugateGradientDescent(object):
         s += "\tEXT: {:f}\n".format(self.extrapolate)
         s += "\tMAX: {:f}\n".format(self.maxEvaluate)
         s += "\tSLP: {:f}\n".format(self.maxSlope)
+        s += "}"
         return s
     
     
@@ -305,7 +306,7 @@ class PRConjugateGradientDescent(object):
         fX = []
         
         # Search direction is the steepest
-        s = -g1
+        s = -g1.copy()
         
         # This is the slope
         d1 = -dot(s, s)
