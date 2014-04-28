@@ -410,7 +410,7 @@ class BackpropCGTrainer(Trainer):
     The PRCG algorithm is implemented based on the MATLAB version of fmincg
     written by Carl Edward Rasmussen. """
     
-    def __init__(self, module, dataset, RHO=0.01, SIG=0.5, reEvaluate=0.1, 
+    def __init__(self, module, dataset, RHO=0.0001, SIG=0.5, reEvaluate=0.1, 
                  extrapolate=3.0, maxEvaluate=20, maxSlope=100.0):
         """ Initialization method. Unlike the normal BackpropTrainer, the
         training dataset must be set during the initialization procedure when
